@@ -15,6 +15,7 @@ Verify your Python installation:
 python --version
 # or
 python3 --version
+```
 
 ## Clone the code
 Clone your repository and change into its directory:
@@ -25,7 +26,6 @@ cd chapter1
 
 ## Run the code
 Run the script with:
-
 ```
 python3 hello.py
 ```
