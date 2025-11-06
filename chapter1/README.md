@@ -31,7 +31,6 @@ python3 hello.py
 ```
 
 The expected output is:
-
 ```
 Hello World!
 ```
