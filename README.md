@@ -193,6 +193,72 @@ python3 chapter8/EG8-21_Sales_load_using_with.py
 
 ---
 
+### Chapter 9 — Dictionaries & Classes
+
+**Path:** [`chapter9/`](chapter9/)
+
+Introduces dictionaries, object-oriented programming with classes, `pickle`-based persistence, and access control. Builds a Tiny Contacts app progressively from a prototype to a full class-based implementation.
+
+| File | What it does |
+|---|---|
+| [`EG9-01_Tiny_Contacts_Prototype.py`](chapter9/EG9-01_Tiny_Contacts_Prototype.py) | First prototype: stores a single contact and displays it |
+| [`EG9-02_Tiny_Contacts_Three_Lists.py`](chapter9/EG9-02_Tiny_Contacts_Three_Lists.py) | Stores names, addresses, and phones in three parallel lists |
+| [`EG9-03_Tiny_Contacts_Quick_Search.py`](chapter9/EG9-03_Tiny_Contacts_Quick_Search.py) | Adds a search function to find a contact by name |
+| [`EG9-04_Tiny_Contacts_Class.py`](chapter9/EG9-04_Tiny_Contacts_Class.py) | Refactors contacts into a class with attributes |
+| [`EG9-05_Tiny_Contacts_with_Editor.py`](chapter9/EG9-05_Tiny_Contacts_with_Editor.py) | Adds an editor function to update contact details |
+| [`EG9-06_Tiny_Contacts_with_Load_and_Save.py`](chapter9/EG9-06_Tiny_Contacts_with_Load_and_Save.py) | Persists contacts to disk using `pickle` |
+| [`EG9-07_Tiny_Contacts_with_constructor.py`](chapter9/EG9-07_Tiny_Contacts_with_constructor.py) | Adds a `__init__` constructor to the contact class |
+| [`EG9-08_Pirate_Treasure_Dictionary.py`](chapter9/EG9-08_Pirate_Treasure_Dictionary.py) | Demonstrates returning multiple values packed in a dictionary |
+| [`EG9-09_Alarm_access_control.py`](chapter9/EG9-09_Alarm_access_control.py) | Shows access control patterns using class attributes |
+
+```bash
+python3 chapter9/EG9-06_Tiny_Contacts_with_Load_and_Save.py
+python3 chapter9/EG9-08_Pirate_Treasure_Dictionary.py
+```
+
+> **Note:** Most files in this chapter require the `BTCInput` module included in [`chapter9/BTCInput.py`](chapter9/BTCInput.py).
+
+---
+
+### Chapter 10 — Object-Oriented Programming & Classes
+
+**Path:** [`chapter10/`](chapter10/)
+
+Deep-dives into OOP: method attributes, class variables, static methods, exceptions, protected attributes, properties, version management, string formatting, and session history. Also introduces playing music notes using the `snaps` library.
+
+| File | What it does |
+|---|---|
+| [`EG10-01_Time_Tracker.py`](chapter10/EG10-01_Time_Tracker.py) | Basic time-tracking app using a class to record sessions |
+| [`EG10-02_Time_Tracker_with_method_attributes.py`](chapter10/EG10-02_Time_Tracker_with_method_attributes.py) | Adds method attributes to store state inside methods |
+| [`EG10-03_Time_Tracker_with_class_variables.py`](chapter10/EG10-03_Time_Tracker_with_class_variables.py) | Introduces class-level variables shared across all instances |
+| [`EG10-04_Time_Tracker_with_static_method.py`](chapter10/EG10-04_Time_Tracker_with_static_method.py) | Adds a `@staticmethod` to the class |
+| [`EG10-05_Time_Tracker_with_status_reporting.py`](chapter10/EG10-05_Time_Tracker_with_status_reporting.py) | Adds a status reporting method to describe tracker state |
+| [`EG10-06_Time_Tracker_with_exception.py`](chapter10/EG10-06_Time_Tracker_with_exception.py) | Raises custom exceptions for invalid operations |
+| [`EG10-07_Time_Tracker_with_exception_handler.py`](chapter10/EG10-07_Time_Tracker_with_exception_handler.py) | Wraps calls in `try/except` to handle exceptions gracefully |
+| [`EG10-08_Time_Tracker_with_protected_attributes.py`](chapter10/EG10-08_Time_Tracker_with_protected_attributes.py) | Uses name-mangled (`__`) attributes to protect internal state |
+| [`EG10-09_Time_Tracker_with_properties.py`](chapter10/EG10-09_Time_Tracker_with_properties.py) | Exposes attributes via `@property` getters and setters |
+| [`EG10-10_Time_Tracker_with_properties_and_exception_handlers.py`](chapter10/EG10-10_Time_Tracker_with_properties_and_exception_handlers.py) | Combines properties with exception handling in setters |
+| [`EG10-11_Time_Tracker_with_Billing_Amount.py`](chapter10/EG10-11_Time_Tracker_with_Billing_Amount.py) | Adds a billing amount calculation to the tracker |
+| [`EG10-12_Time_Tracker_with_version_management.py`](chapter10/EG10-12_Time_Tracker_with_version_management.py) | Adds a version field to manage class schema changes |
+| [`EG10-13_Time_Tracker_with_version_managed_billing.py`](chapter10/EG10-13_Time_Tracker_with_version_managed_billing.py) | Combines version management with billing calculation |
+| [`EG10-14_Time_Tracker_with_string_method.py`](chapter10/EG10-14_Time_Tracker_with_string_method.py) | Implements `__str__` to give the class a readable string representation |
+| [`EG10-15_Time_Tracker_with_formatted_string.py`](chapter10/EG10-15_Time_Tracker_with_formatted_string.py) | Uses f-strings to format the string output |
+| [`EG10-16_Time_Tracker_with_session_history.py`](chapter10/EG10-16_Time_Tracker_with_session_history.py) | Records a full history of tracked sessions in a list |
+| [`EG10-17_Play_notes.py`](chapter10/EG10-17_Play_notes.py) | Plays individual musical notes using the `snaps` library |
+| [`EG10-18_Twinkle_Twinkle.py`](chapter10/EG10-18_Twinkle_Twinkle.py) | Plays Twinkle Twinkle Little Star note by note |
+| [`EG10-19_Twinkle_Twinkle_Tuples.py`](chapter10/EG10-19_Twinkle_Twinkle_Tuples.py) | Stores the melody as a list of tuples (note, duration) |
+| [`EG10-20_Twinkle_Twinkle_classes.py`](chapter10/EG10-20_Twinkle_Twinkle_classes.py) | Refactors the melody player into a class |
+| [`EG10-21_Twinkle_Twinkle_printer.py`](chapter10/EG10-21_Twinkle_Twinkle_printer.py) | Adds a printer method to display the melody as it plays |
+
+```bash
+python3 chapter10/EG10-16_Time_Tracker_with_session_history.py
+python3 chapter10/EG10-21_Twinkle_Twinkle_printer.py
+```
+
+> **Note:** EG10-01 through EG10-16 require `BTCInput` ([`chapter10/BTCInput.py`](chapter10/BTCInput.py)). EG10-17 through EG10-21 require the `snaps` library.
+
+---
+
 ## Repository structure
 
 ```
@@ -208,5 +274,7 @@ begin-code-with-python/
 ├── chapter5/          # Conditions & alarm clocks
 ├── chapter6/          # While loops
 ├── chapter7/          # Functions, scope & the debugger
-└── chapter8/          # Lists, sorting, file I/O & tuples
+├── chapter8/          # Lists, sorting, file I/O & tuples
+├── chapter9/          # Dictionaries & classes
+└── chapter10/         # OOP deep-dive & music notes
 ```
