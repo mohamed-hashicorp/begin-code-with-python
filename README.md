@@ -259,6 +259,95 @@ python3 chapter10/EG10-21_Twinkle_Twinkle_printer.py
 
 ---
 
+### Chapter 11 — Inheritance & the Fashion Shop
+
+**Path:** [`chapter11/`](chapter11/)
+
+Introduces class inheritance, `super().__init__()`, `__str__`, versioning, and builds a full Fashion Shop inventory system with tagging support.
+
+| File | What it does |
+|---|---|
+| [`EG11-01_Separate_classes.py`](chapter11/EG11-01_Separate_classes.py) | Defines separate `Dress` and `Jeans` classes with no shared base |
+| [`EG11-02_Stock_Item_class_failed.py`](chapter11/EG11-02_Stock_Item_class_failed.py) | First attempt at a `StockItem` base class — shows what goes wrong without `super()` |
+| [`EG11-03_Stock_Item_class_super_init.py`](chapter11/EG11-03_Stock_Item_class_super_init.py) | Fixes inheritance by calling `super().__init__()` correctly |
+| [`EG11-04_Stock_Items_with_str.py`](chapter11/EG11-04_Stock_Items_with_str.py) | Adds `__str__` to `StockItem` for readable output |
+| [`EG11-05_Stock_Items_with_version.py`](chapter11/EG11-05_Stock_Items_with_version.py) | Adds a version attribute to manage class schema evolution |
+| [`EG11-06_Instrumented_Stock_Items.py`](chapter11/EG11-06_Instrumented_Stock_Items.py) | Adds instrumentation to track object creation and usage |
+| [`EG11-07_Creating_Stock_Items.py`](chapter11/EG11-07_Creating_Stock_Items.py) | Demonstrates creating and displaying a list of stock items |
+| [`EG11-08_Adding_to_stock_levels.py`](chapter11/EG11-08_Adding_to_stock_levels.py) | Adds a method to increase the stock level of an item |
+| [`EG11-09_Selling_stock.py`](chapter11/EG11-09_Selling_stock.py) | Adds a sell method that decreases stock and validates availability |
+| [`EG11-10_FashionShop_template.py`](chapter11/EG11-10_FashionShop_template.py) | Scaffolds the `FashionShop` class structure |
+| [`EG11-11_FashionShop_class.py`](chapter11/EG11-11_FashionShop_class.py) | Implements the `FashionShop` class with `pickle` persistence |
+| [`EG11-12_Complete_Fashion_Shop.py`](chapter11/EG11-12_Complete_Fashion_Shop.py) | Full Fashion Shop app with menu-driven stock management |
+| [`EG11-13_Fashion_Shop_with_Tags.py`](chapter11/EG11-13_Fashion_Shop_with_Tags.py) | Extends the shop to support searching and filtering by tags |
+| [`EG11-14_Tag_only_fashion_shop.py`](chapter11/EG11-14_Tag_only_fashion_shop.py) | Refactors the shop to use tags as the primary identifier |
+
+```bash
+python3 chapter11/EG11-12_Complete_Fashion_Shop.py
+python3 chapter11/EG11-14_Tag_only_fashion_shop.py
+```
+
+> **Note:** Most files require `BTCInput` ([`chapter11/BTCInput.py`](chapter11/BTCInput.py)).
+
+---
+
+### Chapter 12 — Advanced Functions, Lambda & Testing
+
+**Path:** [`chapter12/`](chapter12/)
+
+Covers function references, lambda expressions, arbitrary arguments, and introduces automated testing with a test suite for the Fashion Shop.
+
+| File | What it does |
+|---|---|
+| [`EG12-01_Simple_Function_References.py`](chapter12/EG12-01_Simple_Function_References.py) | Demonstrates storing and calling functions via references |
+| [`EG12-02_Invalid_Function_References.py`](chapter12/EG12-02_Invalid_Function_References.py) | Shows what happens with invalid or missing function references |
+| [`EG12-03_Robot_Dancer.py`](chapter12/EG12-03_Robot_Dancer.py) | Uses function references to choreograph a robot dance sequence |
+| [`EG12-04_Lamdba_Example.py`](chapter12/EG12-04_Lamdba_Example.py) | Introduces lambda expressions for inline anonymous functions |
+| [`EG12-05_Test_contact_generator.py`](chapter12/EG12-05_Test_contact_generator.py) | Generates test contact objects for automated testing |
+| [`EG12-06_Aribitrary_Arguments.py`](chapter12/EG12-06_Aribitrary_Arguments.py) | Demonstrates `*args` for functions that accept any number of arguments |
+| [`EG12-07_Using_a_BTCImport_function.py`](chapter12/EG12-07_Using_a_BTCImport_function.py) | Shows how to use a function imported from the `BTCInput` module |
+| [`EG12-08_FashionShopApp/`](chapter12/EG12-08_FashionShopApp/) | Full Fashion Shop application package |
+| [`EG12-09_TestFashionShopApp/`](chapter12/EG12-09_TestFashionShopApp/) | Automated test suite for the Fashion Shop app |
+| [`EG12-10_TestFashionShopApp_Doc/`](chapter12/EG12-10_TestFashionShopApp_Doc/) | Documented version of the test suite |
+
+```bash
+python3 chapter12/EG12-04_Lamdba_Example.py
+python3 chapter12/EG12-06_Aribitrary_Arguments.py
+```
+
+> **Note:** Some files require `BTCInput` ([`chapter12/BTCInput.py`](chapter12/BTCInput.py)).
+
+---
+
+### Chapter 13 — Graphical User Interfaces (tkinter)
+
+**Path:** [`chapter13/`](chapter13/)
+
+Introduces GUI programming with `tkinter`. Builds from a simple adding machine up to a full multi-panel Fashion Shop GUI application.
+
+| Entry | What it does |
+|---|---|
+| [`EG13-01_First_Adding_machine.py`](chapter13/EG13-01_First_Adding_machine.py) | First tkinter window: an adding machine with two inputs and a result |
+| [`EG13-02_Exception_handler_with_messages.py`](chapter13/EG13-02_Exception_handler_with_messages.py) | Adds exception handling to display errors in the GUI |
+| [`EG13-03_Adder_with_sensible_messages.py`](chapter13/EG13-03_Adder_with_sensible_messages.py) | Improves error messages shown to the user |
+| [`EG13-04_Adder_with_messagebox.py`](chapter13/EG13-04_Adder_with_messagebox.py) | Uses `tkinter.messagebox` for pop-up error dialogs |
+| [`EG13-05_TemperatureConverter_Starter/`](chapter13/EG13-05_TemperatureConverter_Starter/) | Starter scaffold for a GUI temperature converter |
+| [`EG13-06_TemperatureConverter_Complete/`](chapter13/EG13-06_TemperatureConverter_Complete/) | Complete GUI temperature converter (Celsius ↔ Fahrenheit) |
+| [`EG13-07_Drawing_program/`](chapter13/EG13-07_Drawing_program/) | A simple freehand drawing app using tkinter canvas and mouse events |
+| [`EG13-08_StockEditDemo/`](chapter13/EG13-08_StockEditDemo/) | GUI form for editing a single stock item |
+| [`EG13-09_StockSelectDemo/`](chapter13/EG13-09_StockSelectDemo/) | GUI list for selecting a stock item from a collection |
+| [`EG13-10_FashionShop/`](chapter13/EG13-10_FashionShop/) | Complete Fashion Shop app with GUI, shell UI, and storage layers |
+
+```bash
+python3 chapter13/EG13-01_First_Adding_machine.py
+python3 chapter13/EG13-06_TemperatureConverter_Complete/TemperatureConverter.py
+python3 chapter13/EG13-10_FashionShop/FashionShopGUIApp.py
+```
+
+> **Note:** All files in this chapter require `tkinter`, which is included with the standard Python 3 distribution.
+
+---
+
 ## Repository structure
 
 ```
@@ -276,5 +365,8 @@ begin-code-with-python/
 ├── chapter7/          # Functions, scope & the debugger
 ├── chapter8/          # Lists, sorting, file I/O & tuples
 ├── chapter9/          # Dictionaries & classes
-└── chapter10/         # OOP deep-dive & music notes
+├── chapter10/         # OOP deep-dive & music notes
+├── chapter11/         # Inheritance & Fashion Shop
+├── chapter12/         # Advanced functions, lambda & testing
+└── chapter13/         # GUI with tkinter
 ```
