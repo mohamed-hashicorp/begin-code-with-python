@@ -348,6 +348,81 @@ python3 chapter13/EG13-10_FashionShop/FashionShopGUIApp.py
 
 ---
 
+### Chapter 14 — Networking & Data Feeds
+
+**Path:** [`chapter14/`](chapter14/)
+
+Introduces network programming with sockets, reading web pages, parsing XML with `ElementTree`, consuming RSS feeds, and fetching live weather data.
+
+| File | What it does |
+|---|---|
+| [`EG14-01_Receive_packets_on_port_10001_from_another_machine.py`](chapter14/EG14-01_Receive_packets_on_port_10001_from_another_machine.py) | Opens a UDP socket and listens for incoming packets on port 10001 |
+| [`EG14-02_Send_packets_on_port_10001_to_another_machine.py`](chapter14/EG14-02_Send_packets_on_port_10001_to_another_machine.py) | Sends UDP packets to another machine on port 10001 using `socket` |
+| [`EG14-03_Web_page_reader.py`](chapter14/EG14-03_Web_page_reader.py) | Fetches and prints the HTML of a web page using `urllib.request` |
+| [`EG14-04_Python_ElementTree.py`](chapter14/EG14-04_Python_ElementTree.py) | Parses an RSS XML string using `xml.etree.ElementTree` |
+| [`EG14-05_RSS_Feed_reader.py`](chapter14/EG14-05_RSS_Feed_reader.py) | Fetches and parses a live RSS feed from the web |
+| [`EG14-06_Weather_Feed_Reader/`](chapter14/EG14-06_Weather_Feed_Reader/) | Reads a live weather XML feed and extracts temperature and conditions |
+
+```bash
+python3 chapter14/EG14-03_Web_page_reader.py
+python3 chapter14/EG14-05_RSS_Feed_reader.py
+python3 chapter14/EG14-06_Weather_Feed_Reader/EG14-06_Weather_Feed_Reader.py
+```
+
+---
+
+### Chapter 15 — Building Web Servers
+
+**Path:** [`chapter15/`](chapter15/)
+
+Builds Python-based web servers from scratch using raw sockets up to a full HTTP server with a web-based message board.
+
+| Entry | What it does |
+|---|---|
+| [`EG15-01_Tiny_socket_web_server.py`](chapter15/EG15-01_Tiny_socket_web_server.py) | Minimal raw-socket web server that responds to any HTTP request |
+| [`EG15-02_Python_web_server.py`](chapter15/EG15-02_Python_web_server.py) | Replaces raw sockets with `http.server.BaseHTTPRequestHandler` |
+| [`EG15-03_Python_web_page_server/`](chapter15/EG15-03_Python_web_page_server/) | Serves a proper HTML page in response to GET requests |
+| [`EG15-04_Full_Python_web_page_server/`](chapter15/EG15-04_Full_Python_web_page_server/) | Full server with configurable port and multi-page routing |
+| [`EG15-05_Web_message_board/`](chapter15/EG15-05_Web_message_board/) | Browser-based message board using `socketserver` and URL parsing |
+
+```bash
+python3 chapter15/EG15-02_Python_web_server.py
+python3 chapter15/EG15-05_Web_message_board/EG15-05_Web_message_board.py
+```
+
+---
+
+### Chapter 16 — Game Programming with pygame
+
+**Path:** [`chapter16/`](chapter16/)
+
+Introduces game development using the `pygame` library. Builds a complete "Cheese and Crackers" arcade game step by step, from drawing shapes to sprites, collision detection, scoring, and a killer tomato enemy.
+
+| Entry | What it does |
+|---|---|
+| [`EG_16-01_pygame_drawing_functions.py`](chapter16/EG_16-01_pygame_drawing_functions.py) | Draws random shapes on screen using pygame drawing functions |
+| [`EG16-02_Image_Drawing.py`](chapter16/EG16-02_Image_Drawing.py) | Loads and displays an image using a pygame class |
+| [`EG16-02_Image_Drawing/`](chapter16/EG16-02_Image_Drawing/) | Folder version of the image drawing demo with assets |
+| [`EG16-03_Moving_cheese/`](chapter16/EG16-03_Moving_cheese/) | Animates a cheese image bouncing around the screen |
+| [`EG16-04_Steerable_cheese/`](chapter16/EG16-04_Steerable_cheese/) | Lets the player steer the cheese with keyboard input |
+| [`EG16-05_background_sprite/`](chapter16/EG16-05_background_sprite/) | Introduces the `Sprite` class and adds a scrolling background |
+| [`EG16-06_Cheese_Player/`](chapter16/EG16-06_Cheese_Player/) | Refactors the player into a dedicated `Sprite` subclass |
+| [`EG16-07_Cheese_and_cracker/`](chapter16/EG16-07_Cheese_and_cracker/) | Adds a single cracker sprite to the game world |
+| [`EG16-08_Cheese_and_crackers/`](chapter16/EG16-08_Cheese_and_crackers/) | Spawns multiple crackers for the player to collect |
+| [`EG16-09_Capturing_crackers/`](chapter16/EG16-09_Capturing_crackers/) | Adds collision detection to capture crackers |
+| [`EG16-09_Scoring_cheese_and_crackers/`](chapter16/EG16-09_Scoring_cheese_and_crackers/) | Adds a score display updated each time a cracker is captured |
+| [`EG16-10_Killer_tomato/`](chapter16/EG16-10_Killer_tomato/) | Introduces an enemy tomato sprite that ends the game on contact |
+| [`EG16-11_Complete_Game/`](chapter16/EG16-11_Complete_Game/) | Complete packaged game with all sprites, sounds, and background assets |
+
+```bash
+python3 chapter16/EG_16-01_pygame_drawing_functions.py
+python3 "chapter16/EG16-11_Complete_Game/EG16-11_Complete_Game.pyw"
+```
+
+> **Note:** Chapter 16 requires `pygame`. Install it with `pip install pygame`.
+
+---
+
 ## Repository structure
 
 ```
@@ -368,5 +443,8 @@ begin-code-with-python/
 ├── chapter10/         # OOP deep-dive & music notes
 ├── chapter11/         # Inheritance & Fashion Shop
 ├── chapter12/         # Advanced functions, lambda & testing
-└── chapter13/         # GUI with tkinter
+├── chapter13/         # GUI with tkinter
+├── chapter14/         # Networking & data feeds
+├── chapter15/         # Building web servers
+└── chapter16/         # Game programming with pygame
 ```
